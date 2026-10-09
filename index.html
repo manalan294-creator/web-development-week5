@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendWise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Budget planner</p>
+          <h1>SpendWise</h1>
+        </div>
+        <button id="promptBudgetBtn" class="secondary-btn">Set Budget via Prompt</button>
+      </header>
+
+      <section class="panel summary-panel">
+        <div class="summary-card">
+          <span>Total Budget</span>
+          <strong id="budgetDisplay">$0.00</strong>
+        </div>
+        <div class="summary-card">
+          <span>Total Expenses</span>
+          <strong id="expensesDisplay">$0.00</strong>
+        </div>
+        <div class="summary-card accent-card">
+          <span>Remaining Balance</span>
+          <strong id="balanceDisplay">$0.00</strong>
+        </div>
+      </section>
+
+      <section class="panel controls-panel">
+        <h2>Budget Setup</h2>
+        <form id="budgetForm">
+          <label for="budgetInput">Monthly budget</label>
+          <input id="budgetInput" type="number" min="0" step="0.01" placeholder="e.g. 2500" />
+          <button type="submit" class="primary-btn">Save Budget</button>
+        </form>
+
+        <div class="inline-actions">
+          <button id="addExpenseBtn" class="primary-btn">Add Expense</button>
+          <button id="resetBtn" class="secondary-btn">Reset</button>
+        </div>
+      </section>
+
+      <section class="panel expense-panel">
+        <h2>Expense Tracker</h2>
+        <ul id="expenseList" class="expense-list">
+          <li class="empty-state">No expenses added yet.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
